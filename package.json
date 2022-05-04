@@ -1,0 +1,46 @@
+{
+  "name": "qlik-repo-browser",
+  "description": "Qlik Sense Enterprise (QSEoW) Repository Rest API Browser ",
+  "version": "1.0.0",
+  "author": {
+    "email": "stefan.stoichev@gmail.com",
+    "name": "Stefan Stoichev",
+    "url": "https://sstoichev.eu"
+  },
+  "private": true,
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public --no-clear",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/countnazgul/qlik-repo-browser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/countnazgul/qlik-repo-browser/issues"
+  },
+  "homepage": "https://github.com/countnazgul/qlik-repo-browsers",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.2.1",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@tsconfig/svelte": "^3.0.0",
+    "rollup": "^2.70.2",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "svelte": "^3.47.0",
+    "svelte-check": "^2.7.0",
+    "svelte-preprocess": "^4.10.6",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "ninja-keys": "^1.2.1",
+    "sirv-cli": "^2.0.2",
+    "svelte-modals": "^1.1.0"
+  }
+}

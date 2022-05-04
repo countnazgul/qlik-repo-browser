@@ -1,3 +1,9 @@
+/public/build/
+old_Method.svelte
+openAPI_data copy.ts
+.vscode/settings.json
+App copy.svelte
+
 # Logs
 logs
 *.log
