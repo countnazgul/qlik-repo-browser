@@ -9,7 +9,7 @@
   import HomeSVG from "./components/svg/Home.svelte";
   import MenuSVG from "./components/svg/Menu.svelte";
   import InfoSVG from "./components/svg/Info.svelte";
-  import GithubSVG from "./components/svg/Github.svelte";
+  import GithubSVG from "./components/svg/GitHub.svelte";
 
   let ninja;
   let transition = true;
