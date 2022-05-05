@@ -90,7 +90,7 @@
     {#if data.schema && data.schema.type && data.schema.type != "array" && !data.schema["$ref"]}
       <div>
         <span>
-          {data.schema.type}
+          <!-- {data.schema.type} -->
           {data.schema.format}
         </span>
       </div>

@@ -1,6 +1,7 @@
 /public/build/
 old_Method.svelte
 openAPI_data copy.ts
+openAPI_data_PROXY.ts
 .vscode/settings.json
 App copy.svelte
 

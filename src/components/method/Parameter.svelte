@@ -3,10 +3,18 @@
   import { openModal, modals } from "svelte-modals";
 
   import Modal from "../DefinitionModal.svelte";
+  import EnumModal from "../EnumModal.svelte";
+  // import Enum from "../Enum.svelte";
   import { getDefinitionData } from "../../data";
   export let parameter;
 
   $: activeModal = $modals.length;
+
+  function handleEnumClick(definition) {
+    openModal(EnumModal, {
+      definition,
+    });
+  }
 
   function handleClick(ref) {
     openModal(Modal, {
@@ -29,7 +37,16 @@
     {/if}
   </div>
   {#if parameter.type}
-    <div>{parameter.type}</div>
+    {#if !parameter.enum}
+      <div>{parameter.type}</div>
+    {:else}
+      <div
+        class:definition={parameter.enum}
+        on:click={() => handleEnumClick(parameter)}
+      >
+        {parameter.type}
+      </div>
+    {/if}
     <!-- {#if parameter.format}
       <div>{parameter.format}</div>
     {/if} -->
@@ -57,9 +74,13 @@
 
   {#if parameter.schema && parameter.schema.type && parameter.schema.type != "array"}
     <div>
-      array [ <span class="definition">
-        {parameter.schema.items.type}
-      </span>]
+      {#if parameter.schema.items}
+        array [ <span class="definition">
+          {parameter.schema.items.type}
+        </span>]
+      {:else}
+        {parameter.schema.type}
+      {/if}
     </div>
   {/if}
 </parameter>
