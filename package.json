@@ -1,7 +1,7 @@
 {
   "name": "qlik-repo-browser",
   "description": "Qlik Sense Enterprise (QSEoW) Repository Rest API Browser ",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "email": "stefan.stoichev@gmail.com",
     "name": "Stefan Stoichev",

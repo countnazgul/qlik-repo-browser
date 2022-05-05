@@ -19,3 +19,9 @@ Data definition
 
 Enum
 ![enum](./images/Enum.PNG)
+
+## Limitations
+
+- I've spend a day on the whole project so far. It's not the perfect code base
+- design is not great and have few issues. Whenever I have bit more free time will try and fix them (this include the color scheme
+- the API endpoints are based on `QSEoW June 2020`

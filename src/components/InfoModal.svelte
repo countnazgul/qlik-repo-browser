@@ -31,8 +31,9 @@
           </div>
           <div>&nbsp;</div>
           <div>
-            The data is sourced from Qlik Repository API itself by calling
-            <code>/qrs/about/openapi/main</code>
+            The data is sourced from Repository API itself by calling
+            <code>/qrs/about/openapi/main</code> endpoint<br />and its based on
+            <strong>QSEoW June 2020</strong>
           </div>
           <div>&nbsp;</div>
           <div>

@@ -1,7 +1,8 @@
 <script>
-  import { closeModal } from "svelte-modals";
+  import { closeModal, openModal } from "svelte-modals";
   import { openAPI } from "../openAPI_data";
   import Enum from "./Enum.svelte";
+  import EnumModal from "./EnumModal.svelte";
 
   export let isOpen;
   export let ref;
@@ -27,6 +28,12 @@
         })
       )
     : [];
+
+  function handleEnumClick(definition) {
+    openModal(EnumModal, {
+      definition,
+    });
+  }
 </script>
 
 {#if isOpen}
@@ -68,6 +75,12 @@
                 <div>
                   {#if property[1].type == "array"}
                     array[]
+                  {:else if property[1].hasOwnProperty("enum")}
+                    <span
+                      class="definition"
+                      on:click={() => handleEnumClick(property[1])}
+                      >{property[1].type}</span
+                    >
                   {:else if property[1].type}
                     {property[1].type}
                   {:else}
